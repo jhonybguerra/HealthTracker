@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ic_item"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/ic_heart_pulse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title_app"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="48dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="HealthTracker"
+        app:layout_constraintBottom_toTopOf="@+id/tv_subtitle_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ic_item"
+        app:layout_constraintTop_toTopOf="@+id/ic_item" />
+
+    <TextView
+        android:id="@+id/tv_subtitle_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Controle sua saúde em poucos toques"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_item"
+        app:layout_constraintEnd_toEndOf="@id/tv_title_app"
+        app:layout_constraintStart_toStartOf="@id/tv_title_app" />
+
+    <EditText
+        android:id="@+id/edt_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Qual o seu peso (kg) ?"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_subtitle_app" />
+
+    <EditText
+        android:id="@+id/edt_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Qual a sua altura (cm) ?"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_weight" />
+
+    <EditText
+        android:id="@+id/edt_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Qual a sua idade ?"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_height" />
+
+    <AutoCompleteTextView
+        android:id="@+id/tv_auto_complete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Quantas vezes você pratica exercícios por semana ?"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_age" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_main_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_auto_complete"
+        tools:listitem="@layout/item_main" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
