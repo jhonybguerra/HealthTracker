@@ -2,6 +2,7 @@ package com.jbgcomposer.healthtracker
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.jbgcomposer.healthtracker.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -23,13 +24,13 @@ class MainActivity : AppCompatActivity() {
         val adapter = MainAdapter(mainItems) { id ->
             when (id) {
                 1 -> {
-
+                Log.i("teste", "cliquei no $id")
                 }
                 2 -> {
-
+                Log.i("teste", "cliquei no $id")
                 }
                 3 -> {
-
+                Log.i("teste", "cliquei no $id")
                 }
             }
         }
