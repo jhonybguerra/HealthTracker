@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tmb_lifestyle">
+        <item>Não faço ou realizo pouco exercício</item>
+        <item>Faço exercícios de 1 a 3 dias por semana</item>
+        <item>Faço exercícios de 3 a 5 dias por semana</item>
+        <item>Faço exercícios de 5 a 7 dias por semana</item>
+        <item>Faço exercícios diariamente, até 2x por dia</item>
+    </string-array>
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_background"
+        android:scaleType="fitXY"
+        android:alpha="0.3"/>
+
+    <ImageView
+        android:id="@+id/ic_item"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/ic_heart_pulse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title_app"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="48dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="HealthTracker"
+        app:layout_constraintBottom_toTopOf="@+id/tv_subtitle_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ic_item"
+        app:layout_constraintTop_toTopOf="@+id/ic_item" />
+
+    <TextView
+        android:id="@+id/tv_subtitle_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Controle sua saúde em poucos toques"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_item"
+        app:layout_constraintEnd_toEndOf="@id/tv_title_app"
+        app:layout_constraintStart_toStartOf="@id/tv_title_app" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginHorizontal="30dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_subtitle_app"
+        tools:text="O seu IMC é 59" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_result"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_result"
+        tools:listitem="@layout/item_result" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

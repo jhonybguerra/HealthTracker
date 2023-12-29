@@ -2,5 +2,36 @@
     <string name="app_name">HealthTracker</string>
     <string name="label_imc">IMC</string>
     <string name="label_tmb">TMB</string>
-    <string name="label_water">Água</string>
+    <string name="imc_desc">IMC é a sigla para Índice de Massa Corporal que serve para avaliar o peso do indivíduo em relação à sua altura e assim indicar se está dentro do peso ideal, acima ou abaixo do peso desejado.\n\nPreencha os campos de peso e altura para descobrir o seu IMC</string>
+    <string name="tmb_desc">TMB é o cálculo para descobrir a quantidade calórica que o corpo necessita com base no seu estilo de vida</string>
+    <string name="weight">Peso (Kg)</string>
+    <string name="height">Altura (cm)</string>
+    <string name="calc">Calcular</string>
+    <string name="fields_messages">Todos os campos devem ser maiores que zero</string>
+
+    <string name="imc_severely_low_weight">Você está severamente abaixo do peso</string>
+    <string name="imc_very_low_weight">Você está muito abaixo do peso</string>
+    <string name="imc_low_weight">Você está abaixo do peso</string>
+    <string name="normal">Você está no peso adequado</string>
+    <string name="imc_high_weight">Você está acima do peso</string>
+    <string name="imc_so_high_weight">Você está moderadamente obeso</string>
+    <string name="imc_severely_high_weight">Você está severamente obeso</string>
+    <string name="imc_extreme_weight">Você está extremamente obeso</string>
+
+    <string name="imc_response">Seu IMC é: %1$.2f</string>
+    <string name="tmb_response">Sua TMB é de %1$.2f calorias</string>
+    <string name="tmb_message">Essa é a quantidade de energia necessária para a manutenção das funções vitais do seu organismo ao longo de 24 horas. </string>
+    <string name="last_result_response">Seu último resultado foi de %1$.2f. Você pode rolar a lista e conferir seu histórico, assim como atualizar ou excluir algum resultado ao tocar em cada item.</string>
+    <string name="list_response">Resultado: %1$.2f, Data: %2$s</string>
+    <string name="save">Salvar</string>
+    <string name="saved">Registro salvo com sucesso</string>
+    <string name="age">Idade</string>
+    <string name="delete_message">Você realmente quer excluir esse item?</string>
+    <string name="label_water">\"Água\"</string>
+    <string name="fields_imc_message">Você precisa preencher o campo de altura e peso</string>
+    <string name="fields_tmb_message">Você precisa preencher todos os campos</string>
+    <string name="fields_water_messages">Você precisa preencher o campo de peso</string>
+    <string name="imc_history">Histórico de IMC</string>
+    <string name="tmb_history">Histórico de TMB</string>
+    <string name="validation_history">Você ainda não salvou nenhum resultado no banco de dados</string>
 </resources>

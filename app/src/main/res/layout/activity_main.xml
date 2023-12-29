@@ -7,6 +7,13 @@
     tools:context=".MainActivity">
 
     <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_background"
+        android:scaleType="fitXY"
+        android:alpha="0.3"/>
+
+    <ImageView
         android:id="@+id/ic_item"
         android:layout_width="64dp"
         android:layout_height="64dp"
@@ -33,6 +40,7 @@
         android:id="@+id/tv_subtitle_app"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Controle sua saúde em poucos toques"
         android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="@+id/ic_item"
@@ -41,56 +49,55 @@
 
     <EditText
         android:id="@+id/edt_weight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/EditTextForm"
         android:layout_marginTop="48dp"
-        android:ems="10"
-        android:gravity="center"
         android:hint="Qual o seu peso (kg) ?"
-        android:inputType="textPersonName"
-        android:textSize="14sp"
+        android:maxLength="3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_subtitle_app" />
 
     <EditText
         android:id="@+id/edt_height"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/EditTextForm"
         android:layout_marginTop="12dp"
-        android:ems="10"
-        android:gravity="center"
         android:hint="Qual a sua altura (cm) ?"
-        android:inputType="textPersonName"
-        android:textSize="14sp"
+        android:maxLength="3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_weight" />
 
     <EditText
         android:id="@+id/edt_age"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/EditTextForm"
         android:layout_marginTop="12dp"
-        android:ems="10"
-        android:gravity="center"
         android:hint="Qual a sua idade ?"
-        android:inputType="textPersonName"
-        android:textSize="14sp"
+        android:maxLength="3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_height" />
 
-    <AutoCompleteTextView
-        android:id="@+id/tv_auto_complete"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tv_ac_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edt_age"
         android:layout_marginTop="12dp"
-        android:hint="Quantas vezes você pratica exercícios por semana ?"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_age" />
+        android:layout_marginHorizontal="24dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+
+        <AutoCompleteTextView
+            android:id="@+id/tv_auto_complete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Você se exercita semanalmente ?"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:inputType="none"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_main_activity"
@@ -101,8 +108,10 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_auto_complete"
+        app:layout_constraintTop_toBottomOf="@id/tv_ac_layout"
         tools:listitem="@layout/item_main" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
