@@ -1,4 +1,4 @@
-<h1 align="center">MegaSorteApp</h1>
+<h1 align="center">HealthTracker</h1>
 
 <p align="center">
   <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
@@ -26,7 +26,9 @@
 </p>
 
 ## Download
-Faça o download da <a href="apk/app-debug.apk?raw=true">APK diretamente</a>. Você pode ver <a href="https://www.google.com/search?q=como+instalar+um+apk+no+android">aqui</a> como instalar uma APK no seu aparelho android.
+<a href='https://play.google.com/store/apps/details?id=com.jbgcomposer.healthtracker'><img width="20%" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>
+
+Ou faça o download da <a href="apk/app-debug.apk?raw=true">APK diretamente</a>. Você pode ver <a href="https://www.google.com/search?q=como+instalar+um+apk+no+android">aqui</a> como instalar uma APK no seu aparelho android.
 
 ## Tecnologias usadas e bibliotecas de código aberto
 
